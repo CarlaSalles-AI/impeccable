@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
-  # Nightly full live-e2e matrix. The smoke groups already gate every PR; the
-  # full sweep is too slow for that, so it runs once a day against main.
-  schedule:
-    - cron: '0 7 * * *'
 
 concurrency:
   # Scheduled runs get their own group: the 07:00 UTC nightly and a push to
